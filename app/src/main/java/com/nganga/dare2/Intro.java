@@ -13,7 +13,9 @@ import com.github.paolorotolo.appintro.AppIntroFragment;
 public class Intro extends AppIntro {
     @Override
     public void init(Bundle savedInstanceState) {
-        addSlide(AppIntroFragment.newInstance("Hello!", "Kenya", image, R.color.hint_foreground_material_light));
+        addSlide(AppIntroFragment.newInstance("Hello!", "Kenya", R.drawable.first, R.color.hint_foreground_material_light));
+        addSlide(AppIntroFragment.newInstance("Did You Know?", "This is the only country with Fluiks", R.drawable.second, R.color.hint_foreground_material_light));
+        addSlide(AppIntroFragment.newInstance("Welcome!", "Enjoy the Beauty", R.drawable.third, R.color.hint_foreground_material_light));
 
     }
 
