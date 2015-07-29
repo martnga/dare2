@@ -1,18 +1,38 @@
 package com.nganga.dare2;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
-public class MainActivity extends Activity {
+/**
+ * Created by nganga on 7/29/15.
+ */
+public class Splash extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.splash);
+
+        // Intitializing the thread that allows splash image show before the main activity
+
+        Thread startTimer = new Thread(){
+            public void run(){
+                try {
+                    sleep(3000);
+                    Intent i = new Intent(Splash.this, AppIntro.class);
+                    startActivity(i);
+                    finish();
+                }
+                catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        };
+        startTimer.start();
     }
 
     @Override
