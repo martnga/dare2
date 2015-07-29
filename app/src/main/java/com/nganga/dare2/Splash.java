@@ -22,7 +22,7 @@ public class Splash extends Activity{
             public void run(){
                 try {
                     sleep(3000);
-                    Intent i = new Intent(Splash.this, AppIntro.class);
+                    Intent i = new Intent(Splash.this, Intro.class);
                     startActivity(i);
                     finish();
                 }
