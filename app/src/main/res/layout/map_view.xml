@@ -3,17 +3,17 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<<<<<<< HEAD
+
     <!--<com.airbnb.android.airmapview.AirMapView
         android:id="@+id/map_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 -->
-=======
+
     <com.airbnb.android.airmapview.AirMapView
         android:id="@+id/map_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
->>>>>>> f98e65ddeacf3b05898ba2882bb25d432473239a
+
 </LinearLayout>

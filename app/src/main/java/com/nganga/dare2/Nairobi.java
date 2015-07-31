@@ -78,13 +78,11 @@ public class Nairobi extends Activity {
 
             @Override
             public void onItemClick(CardItemView view, int position) {
-<<<<<<< HEAD
+
                /* mapView = (AirMapView) findViewById(R.id.map_view);
                 mapView.initialize(getSupportFragmentManager());*/
-=======
-                mapView = (AirMapView) findViewById(R.id.map_view);
-                mapView.initialize(getSupportFragmentManager());
->>>>>>> f98e65ddeacf3b05898ba2882bb25d432473239a
+
+
             }
 
             @Override
