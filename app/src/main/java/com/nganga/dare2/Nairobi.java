@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.dexafree.materialList.cards.SmallImageCard;
+import com.dexafree.materialList.view.MaterialListView;
+
 /**
  * Created by nganga on 7/31/15.
  */
@@ -13,6 +16,37 @@ public class Nairobi extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nairobi);
+
+        MaterialListView mListView = (MaterialListView) findViewById(R.id.material_listview);
+
+        SmallImageCard card = new SmallImageCard(this);
+        card.setDescription("Kenya's Tourism Hub");
+        card.setTitle("Mombasa");
+        card.setDrawable(R.drawable.mombasa);
+
+
+        SmallImageCard card2 = new SmallImageCard(this);
+        card.setDescription("Africa's Rising Star");
+        card.setTitle("Nairobi");
+        card.setDrawable(R.drawable.nairobi);
+
+
+        SmallImageCard card3 = new SmallImageCard(this);
+        card.setDescription("The Lake Side");
+        card.setTitle("Kisumu");
+        card.setDrawable(R.drawable.kisumu);
+
+
+        SmallImageCard card4 = new SmallImageCard(this);
+        card.setDescription("City In the Sun");
+        card.setTitle("Moyale");
+        card.setDrawable(R.drawable.moyale);
+
+        mListView.add(card);
+        mListView.add(card2);
+        mListView.add(card3);
+        mListView.add(card4);
+
     }
 
     @Override
