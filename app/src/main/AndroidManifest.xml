@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nganga.dare2" >
 
+    <meta-data
+        android:name="com.mapbox.ACCESS_TOKEN"
+        android:value="pk.eyJ1IjoibmdhbmdhIiwiYSI6ImU5ZmUxYjg4ZGFhN2FiMTA3ZWRkMzI2ZTJkN2E4ZjZlIn0.wbzRcUlKtS6M8Lys56s1Ew"/>
+    <meta-data
+        android:name="com.mapbox.MAP_ID"
+        android:value="nganga.fc06b8ed"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.airbnb.android.airmapview.AirMapView;
 import com.dexafree.materialList.cards.SmallImageCard;
 import com.dexafree.materialList.controller.OnDismissCallback;
 import com.dexafree.materialList.controller.RecyclerItemClickListener;
@@ -77,7 +78,8 @@ public class Nairobi extends Activity {
 
             @Override
             public void onItemClick(CardItemView view, int position) {
-                Log.d("CARD_TYPE", view.getTag().toString());
+                mapView = (AirMapView) findViewById(R.id.map_view);
+                mapView.initialize(getSupportFragmentManager());
             }
 
             @Override
