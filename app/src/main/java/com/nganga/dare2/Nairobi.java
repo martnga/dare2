@@ -1,21 +1,34 @@
 package com.nganga.dare2;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.dexafree.materialList.cards.SmallImageCard;
+import com.dexafree.materialList.controller.OnDismissCallback;
+import com.dexafree.materialList.controller.RecyclerItemClickListener;
+import com.dexafree.materialList.model.Card;
+import com.dexafree.materialList.model.CardItemView;
 import com.dexafree.materialList.view.MaterialListView;
 
 /**
  * Created by nganga on 7/31/15.
  */
 public class Nairobi extends Activity {
+    private MaterialListView mListView;
+    private Context mContext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nairobi);
+
+       /* / Save a reference to the context*/
+        mContext = this;
+
 
         MaterialListView mListView = (MaterialListView) findViewById(R.id.material_listview);
 
@@ -45,9 +58,37 @@ public class Nairobi extends Activity {
         mListView.add(card);
         mListView.add(card2);
         mListView.add(card3);
-        mListView.add(card4git);
+        mListView.add(card4);
+
+        // Set the dismiss listener
+        mListView.setOnDismissCallback(new OnDismissCallback() {
+            @Override
+            public void onDismiss(Card card, int position) {
+
+                // Recover the tag linked to the Card
+                String tag = card.getTag().toString();
+
+                // Show a toast
+                Toast.makeText(mContext, "You have dismissed a " + tag, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        mListView.addOnItemTouchListener(new RecyclerItemClickListener.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(CardItemView view, int position) {
+                Log.d("CARD_TYPE", view.getTag().toString());
+            }
+
+            @Override
+            public void onItemLongClick(CardItemView view, int position) {
+                Log.d("LONG_CLICK", view.getTag().toString());
+            }
+        });
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
