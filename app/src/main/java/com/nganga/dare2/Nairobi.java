@@ -45,7 +45,7 @@ public class Nairobi extends Activity {
         mListView.add(card);
         mListView.add(card2);
         mListView.add(card3);
-        mListView.add(card4);
+        mListView.add(card4git);
 
     }
 
