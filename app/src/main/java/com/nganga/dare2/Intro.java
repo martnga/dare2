@@ -20,7 +20,7 @@ public class Intro extends AppIntro {
     }
 
     private void loadMainActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Nairobi.class);
         startActivity(intent);
     }
 
